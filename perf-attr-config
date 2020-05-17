@@ -1,0 +1,16 @@
+--cpu 6/94/3
+--time-shift 31
+--time-mult 828489790
+--time-zero 18446689497313008999
+--cpuid-0x15.ebx 216
+--cpuid-0x15.eax 2
+--nom-freq 26
+--sample-type 0x10086
+--mtc-freq 0x3
+--sideband 0 perf.data-sideband-cpu0.pevent
+--sideband 1 perf.data-sideband-cpu1.pevent
+--sideband 2 perf.data-sideband-cpu2.pevent
+--sideband 3 perf.data-sideband-cpu3.pevent
+--sideband 4 perf.data-sideband-cpu4.pevent
+--sideband 5 perf.data-sideband-cpu5.pevent
+--sideband 6 perf.data-sideband-cpu6.pevent

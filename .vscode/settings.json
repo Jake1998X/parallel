@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "bfd.h": "c",
+        "intel_pt.h": "c",
+        "libipt_sb.h": "c",
+        "elf.h": "c",
+        "string.h": "c",
+        "stdlib.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
