@@ -1,0 +1,18 @@
+% 中英文摘要
+
+\begin{cnabstract}{英特尔处理器追踪；嗅探；并行化算法}
+  基于硬件机制的嗅探技术借助处理器已有的硬件模块，实现在底层对程序执行信息的收集与跟踪，对源程序无侵入，引入较低的额外开销。英特尔处理器追踪(Intel PT)是一种新的在英特尔处理器上支持硬件嗅探技术的硬件机制, 它追踪程序在中央处理器上的分支执行，通过对追踪数据的解码能够重构程序执行的整个控制流。不过，虽然Intel PT减少了程序执行时的额外开销，但追踪过程中产生的大量数据使得解码的效率通常比追踪的效率低几个数量级，实际上将开销转移到了解码阶段。
+
+  为了提高解码过程的效率，降低解码阶段的开销，本课题在利用Intel PT实现对C/C++程序的嗅探时，完成了对Intel PT追踪数据解码的并行化设计与实现。本课题主要完成了三个方面的内容：追踪，配置Intel PT在程序执行的过程中记录并导出不同处理器执行下的Intel PT数据流；解码，实现Intel PT数据包、事件、指令三个层次的解码，利用数据包层解码器切分数据流，利用指令级解码器并行化解码切分后的Intel PT的追踪数据流，重构机器指令的执行；映射，将机器指令映射到源代码，实现对源程序的嗅探。
+
+  实验中追踪和解码了SIR的10个C/C++程序，评价了追踪的开销和解码的效率，在Linux 5.3内核，ubuntu18.04操作系统，Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz处理器的环境下，追踪阶段产生的额外开销小于5\%，解码阶段减少了非并行化解码器60\%-70\%的解码时间。
+\end{cnabstract}
+
+
+\begin{enabstract}{Intel Processor Trace; Profiling; Parallel Algorithms}
+  Hardware-based profiling takes advantage of existent features of Center Processing Unit(CPU), to achieve tracing and information collecting during the execution of programs in the hardware level. It is non-intrusive to source codes and introduces little cost. Intel Processor Trace is a new hardware feature in Intel processors which can help profiling. It can reconstruct the whole execution flow of programs by decoding the branch execution collected during running time. Though it reduces the extra cost during the execution of programs, great number of data collecting during tracing period results the efficiency of decoding to be several orders of magnitude lower than the efficiency of tracing. It actually shifts the cost to decoding period.
+
+  To improve the performance of decoding period and reduce the cost of decoding, this project designs to implement a parallel decoder based on Intel PT while using it to implement a profiling tool for C/C++ programs. Three parts are mainly achieved in this project: First, trace. Record with Intel PT after being configured correctly and dump the Intel PT trace data stream. Second, decode. Implement PT packet-level, event-level and instruction-level decoder. Use packet-level decoder to split the trace stream and instruction-level decoder to parallel decode the trace stream and reconstruct the execution of machine codes. Second, map. Map the execution of machine codes to source codes, so we can profile the source codes.
+
+  In the experiment, We traced and decoded 10 C/C++ programs in SIR, then evaluated the overhead in tracing period and efficiency in decoding period. In Linux 5.3, ubuntu18.03, processor of Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz, the overhead was lower than 5\% in tracing period, and the the decoding time reduced 60\% to 70\% compared to non-parallel decoding.
+\end{enabstract}

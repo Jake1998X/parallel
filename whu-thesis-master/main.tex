@@ -1,0 +1,40 @@
+%% Bachelor Thesis Template of Wuhan Uniersity
+%%
+%% Created by Fing
+
+\documentclass[]{WHUBachelor}
+
+\begin{document}
+%%----------- 封面部分 ----------- %%
+  \stunum{2016300030028}
+  \ctitle{面向Intel PT追踪数据的并行解码器设计与实现}
+  \cschool{弘毅学堂}
+  \cmajor{计算机科学与技术}
+  \cauthor{吉凯}
+  \cadvisor{ 何发智\quad 教授 \quad 左志强\quad 助理教授}
+  
+  \cdate{二〇二〇年五月}
+
+  \maketitlepage            % 封面
+  \makestatement            % 申明
+
+%%----------- 前言部分 ----------- %%
+  \include{pages/abstract}  % 摘要
+  \contents                 % 目录
+
+%%----------- 主体部分 ----------- %%
+  \include{pages/chapter1}
+  \include{pages/chapter2}
+  \include{pages/chapter3}
+  \include{pages/chapter4}
+  \include{pages/chapter5}
+
+%%----------- 结尾部分 ----------- %%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{参考文献}
+  \bibliography{ref/refs}   % 参考文献
+
+  \include{pages/thanks}    % 致谢
+
+\end{document}
